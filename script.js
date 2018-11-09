@@ -40,5 +40,9 @@ function load_article(ele, url, html) {
     ele.children[0].remove();
     
     switch (domain) {
+        default: return Promise.resolve().then(() => {
+            ele.appendChild(document.createElement("h1"));
+            ele.children[0].innerHTML = `The domain ${domain} is not supported. Sorry!`;
+        });
     }
 }
