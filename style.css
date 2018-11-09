@@ -21,3 +21,6 @@ h2 {
     font-size: 24px;
     margin-left: 0.5em;
 }
+#section-main details ul li a::after {
+    content: attr(href);
+}
