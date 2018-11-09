@@ -7,12 +7,17 @@
         <title>Reader</title>
         <link rel="stylesheet" href="https://nektro.github.io/theme.css">
         <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://gitcdn.xyz/repo/nektro/fluent_design.js/0f4a5ca/src/FluentTextboxElement.js"></script>
+        <script type="module" src="https://gitcdn.xyz/repo/nektro/fluent_design.js/0f4a5ca/src/FluentButtonElement.js"></script>
         <script type="module" src="script.js"></script>
     </head>
     <body>
         <main id="section-main" hidden>
             <h1>Reader</h1>
             <hr>
+            <fl-textbox id="site-url" name="link" type="text" placeholder="https://"></fl-textbox>
+            <fl-button id="button" label="Submit Query"></fl-button>
+            <br><br>
         </main>
         <main id="section-article" hidden>
             <h1><span class="spin">📰</span></h1>
