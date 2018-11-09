@@ -38,9 +38,11 @@ function parse_html(string) {
 function load_article(ele, url, html) {
     const domain = url.hostname;
     ele.children[0].remove();
+    ele.innerHTML += `<div class="banner"><a href="${url.href}"><img src="./icons/${domain}.png"><span>${domain} ></span></a></div><br>`;
     
     switch (domain) {
         default: return Promise.resolve().then(() => {
+            ele.children[0].remove();
             ele.appendChild(document.createElement("h1"));
             ele.children[0].innerHTML = `The domain ${domain} is not supported. Sorry!`;
         });
