@@ -10,3 +10,14 @@
     display: inline-block;
     animation: spin 1s linear 0s infinite forwards;
 }
+h2 {
+    color: #ddd;
+}
+.banner a {
+    display: flex;
+    flex-direction: row;
+}
+.banner a span {
+    font-size: 24px;
+    margin-left: 0.5em;
+}
