@@ -19,7 +19,7 @@ else {
     console.log("load article");
     const ele = document.getElementById("section-article");
     ele.removeAttribute("hidden");
-    const url = new URL("https://"+here.searchParams.get("url"));
+    const url = new URL(here.searchParams.get("url"));
     //
     Promise.resolve(PROXY + url.href)
     .then(x => fetch(x))
