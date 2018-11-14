@@ -26,6 +26,9 @@ h2 {
     font-size: 24px;
     margin-left: 0.5em;
 }
+.banner a img {
+    max-height: 32px;
+}
 #section-main details ul li a::after {
     content: attr(href);
 }
