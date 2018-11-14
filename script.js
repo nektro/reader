@@ -42,7 +42,8 @@ function load_article(ele, url, html) {
     document.title = html.querySelector("title").textContent + " - Reader by Nektro";
     
     switch (domain) {
-        case "www.polygon.com": return Promise.resolve().then(() => {
+        case "www.polygon.com":
+        return Promise.resolve().then(() => {
             const e1 = (html.querySelector("div.c-entry-hero__content.l-segment.l-feature"));
             e1.children[0].remove();
             Array.from(e1.querySelectorAll("[class]")).forEach(v => v.removeAttribute("class"));
@@ -54,7 +55,8 @@ function load_article(ele, url, html) {
             Array.from(e2.children).forEach(v => ele.appendChild(v));
             ele.appendChild(document.createElement("hr"));
         });
-        default: return Promise.resolve().then(() => {
+        default:
+        return Promise.resolve().then(() => {
             ele.children[0].remove();
             ele.appendChild(document.createElement("h1"));
             ele.children[0].innerHTML = `The domain ${domain} is not supported. Sorry!`;
