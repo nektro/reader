@@ -39,6 +39,7 @@ function load_article(ele, url, html) {
     const domain = url.hostname;
     ele.children[0].remove();
     ele.innerHTML += `<div class="banner"><a href="${url.href}"><img src="./icons/${domain}.png"><span>${domain}</span></a><span>&nbsp;&gt;</span></div><br>`;
+    document.title = html.querySelector("title").textContent + " - Reader by Nektro";
     
     switch (domain) {
         case "www.polygon.com": return Promise.resolve().then(() => {
@@ -52,7 +53,6 @@ function load_article(ele, url, html) {
             Array.from(e2.querySelectorAll("section")).forEach(v => v.remove());
             Array.from(e2.children).forEach(v => ele.appendChild(v));
             ele.appendChild(document.createElement("hr"));
-            document.title = html.querySelector("title").textContent + " - Reader by Nektro";
         });
         default: return Promise.resolve().then(() => {
             ele.children[0].remove();
