@@ -38,7 +38,7 @@ function parse_html(string) {
 function load_article(ele, url, html) {
     const domain = url.hostname;
     ele.children[0].remove();
-    ele.innerHTML += `<div class="banner"><a href="${url.href}"><img src="./icons/${domain}.png"><span>${domain} ></span></a><br></div>`;
+    ele.innerHTML += `<div class="banner"><a href="${url.href}"><img src="./icons/${domain}.png"><span>${domain}</span></a><span>&nbsp;&gt;</span></div><br>`;
     
     switch (domain) {
         case "www.polygon.com": return Promise.resolve().then(() => {
