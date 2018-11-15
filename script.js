@@ -41,6 +41,9 @@ function create_element(name, attrs, chlds) {
     for (const cn of (chlds || [])) ele.appendChild(cn);
     return ele;
 }
+function dcTN(string) {
+    return document.createTextNode(string);
+}
 function load_article(ele, url, html) {
     const domain = url.hostname;
     ele.children[0].remove();
