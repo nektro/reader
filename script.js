@@ -30,20 +30,6 @@ else {
 
 //
 //
-function parse_html(string) {
-    const element = document.createElement("html");
-    element.innerHTML = string;
-    return element;
-}
-function create_element(name, attrs, chlds) {
-    const ele = document.createElement(name);
-    for (const at of (attrs || [])) ele.setAttribute(at[0], at[1]);
-    for (const cn of (chlds || [])) ele.appendChild(cn);
-    return ele;
-}
-function dcTN(string) {
-    return document.createTextNode(string);
-}
 function load_article(ele, url, html) {
     const domain = url.hostname;
     ele.children[0].remove();
@@ -72,4 +58,18 @@ function load_article(ele, url, html) {
             ele.children[0].innerHTML = `The domain ${domain} is not supported. Sorry!`;
         });
     }
+}
+function parse_html(string) {
+    const element = document.createElement("html");
+    element.innerHTML = string;
+    return element;
+}
+function create_element(name, attrs, chlds) {
+    const ele = document.createElement(name);
+    for (const at of (attrs || [])) ele.setAttribute(at[0], at[1]);
+    for (const cn of (chlds || [])) ele.appendChild(cn);
+    return ele;
+}
+function dcTN(string) {
+    return document.createTextNode(string);
 }
