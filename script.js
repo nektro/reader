@@ -58,6 +58,7 @@ function load_article(ele, url, html) {
         default:
         return Promise.resolve().then(() => {
             ele.children[0].remove();
+            ele.children[0].remove();
             ele.appendChild(document.createElement("h1"));
             ele.children[0].innerHTML = `The domain ${domain} is not supported. Sorry!`;
         });
