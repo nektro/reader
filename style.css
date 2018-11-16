@@ -6,6 +6,14 @@
         transform: rotate(360deg);
     }
 }
+body {
+    display: block;
+}
+main {
+    max-width: 45em;
+    margin: auto;
+    margin-bottom: 1em;
+}
 .spin {
     display: inline-block;
     animation: spin 1s linear 0s infinite forwards;
@@ -31,11 +39,6 @@ h2 {
 }
 #section-main details ul li a::after {
     content: attr(href);
-}
-#section-article {
-    max-width: 45em;
-    margin-left: auto;
-    margin-right: auto;
 }
 #section-article img {
     display: block;
