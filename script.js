@@ -50,6 +50,25 @@ function load_article(ele, url, html) {
             Array.from(e2.children).forEach(v => ele.appendChild(v));
             ele.appendChild(document.createElement("hr"));
         });
+        case "medium.com":
+        return Promise.resolve().then(() => {
+            ele.appendChild(create_element("div", [], [
+                dcTN("By "),
+                remove_all_attributes(html.querySelectorAll(`[data-action="show-user-card"]`)[1]),
+                dcTN(" / "),
+                html.querySelector("time"),
+            ]));
+            ele.appendChild(create_element("hr"));
+            const a = html.querySelector(".section-content");
+            const b = remove_all_attributes(a);
+            for (const el of b.querySelectorAll("figure div div")) {
+                if (el.children.length > 0) {
+                    const ni = (remove_all_attributes(parse_html_ele(el.children[3].textContent)));
+                    el.parentElement.parentElement.parentElement.replaceChild(ni, el.parentElement.parentElement);
+                }
+            }
+            ele.appendChild(b);
+        });
         default:
         return Promise.resolve().then(() => {
             ele.children[0].remove();
