@@ -82,3 +82,6 @@ function remove_all_attributes(element) {
         remove_all_attributes(el);
     return element;
 }
+function parse_html_ele(string) {
+    return parse_html(string).children[1].children[0];
+}
