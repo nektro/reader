@@ -38,3 +38,8 @@ h2 {
     margin-right: auto;
     font-size: 150%;
 }
+#section-article img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
