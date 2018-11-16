@@ -73,3 +73,12 @@ function create_element(name, attrs, chlds) {
 function dcTN(string) {
     return document.createTextNode(string);
 }
+function remove_all_attributes(element) {
+    const attrs = [...element.attributes];
+    for (const at of attrs)
+        if (!(["src","width","height","alt","href"].includes(at.nodeName)))
+            element.removeAttribute(at.nodeName);
+    for (const el of element.children)
+        remove_all_attributes(el);
+    return element;
+}
