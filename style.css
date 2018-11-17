@@ -16,8 +16,7 @@ body {
     background-color: white;
 }
 main {
-    max-width: 45em;
-    margin: auto;
+    margin: 0;
 }
 #section-main {
     min-width: calc(100vw - 3em);
@@ -54,6 +53,8 @@ h2 {
     background-color: white;
     color: #444;
     border: 0;
+    max-width: 45em;
+    margin: auto;
 }
 #section-article img {
     display: block;
