@@ -20,7 +20,7 @@ main {
     margin: 0;
 }
 #section-main {
-    min-width: calc(100vw - 3em);
+    width: calc(100vw - 4.1em);
 }
 .spin {
     display: inline-block;
