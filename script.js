@@ -55,6 +55,7 @@ function load_article(ele, url, html) {
             ele.appendChild(document.createElement("hr"));
         });
         case "medium.com":
+        case "medium.freecodecamp.org":
         return Promise.resolve().then(() => {
             ele.appendChild(create_element("div", [], [
                 dcTN("By "),
