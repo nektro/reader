@@ -39,10 +39,9 @@ function load_article(ele, url, html) {
     switch (domain) {
         case "www.polygon.com":
         return Promise.resolve().then(() => {
-            const e1 = (html.querySelector("div.c-entry-hero__content.l-segment.l-feature"));
-            e1.children[0].remove();
-            Array.from(e1.querySelectorAll("[class]")).forEach(v => v.removeAttribute("class"));
-            Array.from(e1.children).forEach(v => ele.appendChild(v));
+            ele.appendChild(r_a_a(html.querySelector(".c-page-title")));
+            ele.appendChild(r_a_a(html.querySelector(".c-entry-summary")));
+            ele.appendChild(r_a_a(html.querySelector(".c-byline")));
             ele.appendChild(document.createElement("hr"));
             const e2 = (html.querySelector("div.c-entry-content"));
             Array.from(e2.querySelectorAll("[id]")).forEach(v => v.removeAttribute("id"));
