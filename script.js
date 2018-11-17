@@ -41,6 +41,7 @@ function load_article(ele, url, html) {
         case "www.theverge.com":
         case "www.vox.com":
         case "www.sbnation.com":
+        case "www.eater.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".c-page-title")));
             ele.appendChild(r_a_a(html.querySelector(".c-entry-summary")));
