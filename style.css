@@ -49,6 +49,9 @@ h2 {
 #section-main details ul li a:nth-child(1)::after {
     content: attr(href);
 }
+#section-main pre {
+    white-space: normal;
+}
 #section-article {
     background-color: white;
     color: #444;
