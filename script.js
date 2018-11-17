@@ -54,16 +54,16 @@ function load_article(ele, url, html) {
         return Promise.resolve().then(() => {
             ele.appendChild(create_element("div", [], [
                 dcTN("By "),
-                remove_all_attributes(html.querySelectorAll(`[data-action="show-user-card"]`)[1]),
+                r_a_a(html.querySelectorAll(`[data-action="show-user-card"]`)[1]),
                 dcTN(" / "),
                 html.querySelector("time"),
             ]));
             ele.appendChild(create_element("hr"));
             const a = html.querySelector(".section-content");
-            const b = remove_all_attributes(a);
+            const b = r_a_a(a);
             for (const el of b.querySelectorAll("figure div div")) {
                 if (el.children.length > 0) {
-                    const ni = (remove_all_attributes(parse_html_ele(el.children[3].textContent)));
+                    const ni = (r_a_a(parse_html_ele(el.children[3].textContent)));
                     el.parentElement.parentElement.parentElement.replaceChild(ni, el.parentElement.parentElement);
                 }
             }
@@ -98,9 +98,12 @@ function remove_all_attributes(element) {
         if (!(["src","width","height","alt","href"].includes(at.nodeName)))
             element.removeAttribute(at.nodeName);
     for (const el of element.children)
-        remove_all_attributes(el);
+        r_a_a(el);
     return element;
 }
 function parse_html_ele(string) {
     return parse_html(string).children[1].children[0];
+}
+function r_a_a(element) {
+    return remove_all_attributes(element);
 }
