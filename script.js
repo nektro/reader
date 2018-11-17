@@ -6,8 +6,6 @@ const PROXY = "https://cors.io/?";
 
 //
 if (!(here.searchParams.has("url"))) {
-    //
-    console.log("load index");
     const ele = document.getElementById("section-main");
     ele.removeAttribute("hidden");
     ele.children[3].addEventListener("click", function() {
@@ -15,8 +13,6 @@ if (!(here.searchParams.has("url"))) {
     });
 }
 else {
-    //
-    console.log("load article");
     const ele = document.getElementById("section-article");
     ele.removeAttribute("hidden");
     const url = new URL(here.searchParams.get("url"));
@@ -28,7 +24,6 @@ else {
     .then(x => load_article(ele, url, x))
 }
 
-//
 //
 function load_article(ele, url, html) {
     const domain = url.hostname;
