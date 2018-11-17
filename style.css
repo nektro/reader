@@ -40,7 +40,7 @@ h2 {
 .banner a img {
     max-height: 32px;
 }
-#section-main details ul li a::after {
+#section-main details ul li a:nth-child(1)::after {
     content: attr(href);
 }
 #section-article img {
