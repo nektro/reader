@@ -41,6 +41,7 @@ function load_article(ele, url, html) {
         case "www.recode.net":
         case "www.theringer.com":
         case "product.voxmedia.com":
+        case "7500toholte.sbnation.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".c-page-title")));
             ele.appendChild(r_a_a(html.querySelector(".c-entry-summary")));
