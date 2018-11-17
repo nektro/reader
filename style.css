@@ -81,6 +81,11 @@ h2 {
     border-radius: 0;
     line-height: 1.4;
 }
+#section-article blockquote {
+    border-left: .5em solid #ccc;
+    margin: 0;
+    padding: 1em 2em;
+}
 footer {
     flex-grow: 1;
 }
