@@ -49,6 +49,7 @@ function load_article(ele, url, html) {
             const e2 = (html.querySelector("div.c-entry-content"));
             Array.from(e2.querySelectorAll("[id]")).forEach(v => v.removeAttribute("id"));
             Array.from(e2.querySelectorAll("section")).forEach(v => v.remove());
+            Array.from(e2.querySelectorAll("aside")).forEach(v => v.remove());
             Array.from(e2.children).forEach(v => ele.appendChild(v));
             ele.appendChild(document.createElement("hr"));
         });
