@@ -38,6 +38,7 @@ function load_article(ele, url, html) {
     
     switch (domain) {
         case "www.polygon.com":
+        case "www.theverge.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".c-page-title")));
             ele.appendChild(r_a_a(html.querySelector(".c-entry-summary")));
