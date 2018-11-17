@@ -47,6 +47,12 @@ h2 {
 .banner a img {
     max-height: 32px;
 }
+#section-main ul {
+    list-style-type: none;
+}
+#section-main ul li h3 {
+    margin: 0;
+}
 #section-main ul li a:nth-child(1)::after {
     content: attr(href);
 }
