@@ -74,6 +74,13 @@ h2 {
     border: 0;
     margin: 0;
 }
+#section-article pre {
+    background-color: #eee;
+    padding: .5em;
+    border: .25em solid #ccc;
+    border-radius: 0;
+    line-height: 1.4;
+}
 footer {
     flex-grow: 1;
 }
