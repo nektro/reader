@@ -38,6 +38,7 @@ function load_article(ele, url, html) {
         case "www.sbnation.com":
         case "www.eater.com":
         case "www.curbed.com":
+        case "www.recode.net":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".c-page-title")));
             ele.appendChild(r_a_a(html.querySelector(".c-entry-summary")));
