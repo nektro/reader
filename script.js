@@ -80,7 +80,8 @@ function load_article(ele, url, html) {
             ele.children[0].remove();
             ele.children[0].remove();
             ele.appendChild(document.createElement("h1"));
-            ele.children[0].innerHTML = `The domain ${domain} is not supported. Sorry!`;
+            ele.children[0].innerHTML = `The domain ${domain} is not supported yet. Sorry!`;
+            ele.appendChild(create_element("p", [], [dcTN(`Want us to add this site to Reader? Submit an issue on GitHub! If an issue already exists make sure to upvote it!`)]));
         });
     }
 }
