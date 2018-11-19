@@ -81,7 +81,11 @@ function load_article(ele, url, html) {
             ele.children[0].remove();
             ele.appendChild(document.createElement("h1"));
             ele.children[0].innerHTML = `The domain ${domain} is not supported yet. Sorry!`;
-            ele.appendChild(create_element("p", [], [dcTN(`Want us to add this site to Reader? Submit an issue on GitHub! If an issue already exists make sure to upvote it!`)]));
+            ele.appendChild(create_element("p", [], [
+                dcTN(`Want us to add support for this domain? Sumbit a proposal `),
+                create_element("a", [["href",`https://github.com/nektro/reader/issues?q=${encodeURIComponent(`is:issue is:open ${domain}`)}`]], [dcTN("here")]),
+                dcTN("! And make sure to upvote proposals that already exist!"),
+            ]));
         });
     }
 }
