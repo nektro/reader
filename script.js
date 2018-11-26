@@ -83,7 +83,7 @@ function load_article(ele, url, html) {
             ele.children[0].innerHTML = `The domain ${domain} is not supported yet. Sorry!`;
             ele.appendChild(create_element("p", [], [
                 dcTN(`Want us to add support for this domain? Sumbit a proposal `),
-                create_element("a", [["href",`https://github.com/nektro/reader/issues?q=${encodeURIComponent(`is:issue is:open ${domain}`)}`]], [dcTN("here")]),
+                create_element("a", [["href",`https://github.com/nektro/reader/issues/new?title=${encodeURIComponent(domain)}&body=${encodeURIComponent(url.href)}`]], [dcTN("here")]),
                 dcTN("! And make sure to upvote proposals that already exist!"),
             ]));
         });
