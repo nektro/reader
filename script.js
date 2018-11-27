@@ -79,14 +79,14 @@ function load_article(ele, url, html) {
         case "www.wired.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector("#articleTitle")));
-            const meta = html.querySelector(`[class="meta-list"]`);
+            const meta = html.querySelector(`.meta-list`);
             ele.appendChild(create_element("div", [], [
                 dcTN("By "),
                 r_a_a(meta.querySelector(`[itemprop="author"]`).firstElementChild),
                 dcTN(" on "),
-                r_a_a(meta.querySelector(`[class="date-mdy"]`)),
+                r_a_a(meta.querySelector(".date-mdy")),
                 dcTN(" at "),
-                r_a_a(meta.querySelector(`[class="date-gia"]`)),
+                r_a_a(meta.querySelector(".date-gia")),
             ]));
             ele.appendChild(create_element("hr"));
             console.log(html.querySelector("main"));
