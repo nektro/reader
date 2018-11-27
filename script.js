@@ -112,6 +112,7 @@ function load_article(ele, url, html) {
         case "free.vice.com":
         case "munchies.vice.com":
         case "garage.vice.com":
+        case "noisey.vice.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".article__title")));
             ele.appendChild(r_a_a(html.querySelector(".article__dek")));
