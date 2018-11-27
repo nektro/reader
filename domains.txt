@@ -21,3 +21,4 @@ munchies.vice.com
 garage.vice.com
 noisey.vice.com
 hackernoon.com
+blog.medium.com
