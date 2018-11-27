@@ -76,6 +76,25 @@ function load_article(ele, url, html) {
                 ele.appendChild(b);
             }
         });
+        case "www.wired.com":
+        return Promise.resolve().then(() => {
+            ele.appendChild(r_a_a(html.querySelector("#articleTitle")));
+            const meta = html.querySelector(`[class="meta-list"]`);
+            ele.appendChild(create_element("div", [], [
+                dcTN("By "),
+                r_a_a(meta.querySelector(`[itemprop="author"]`).firstElementChild),
+                dcTN(" on "),
+                r_a_a(meta.querySelector(`[class="date-mdy"]`)),
+                dcTN(" at "),
+                r_a_a(meta.querySelector(`[class="date-gia"]`)),
+            ]));
+            ele.appendChild(create_element("hr"));
+            console.log(html.querySelector("main"));
+            for (const p of html.querySelectorAll("main div p, main div figure")) {
+                console.log(p);
+                ele.appendChild(r_a_a(p));
+            }
+        });
         default:
         return Promise.resolve().then(() => {
             ele.children[1].remove();
