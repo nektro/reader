@@ -28,7 +28,7 @@ else {
 function load_article(ele, url, html) {
     const domain = url.hostname;
     ele.children[0].remove();
-    ele.innerHTML += `<div class="banner"><a href="${url.href}"><img src="./icons/${domain}.png"><span>${domain}</span></a><span>&nbsp;&gt;</span></div><br>`;
+    ele.innerHTML += `<div class="banner"><a href="${url.href}"><img src="https://www.google.com/s2/favicons?domain=${domain}"><span>${domain}</span></a><span>&nbsp;&gt;</span></div><br>`;
     document.title = html.querySelector("title").textContent + " - Reader by Nektro";
     
     switch (domain) {
