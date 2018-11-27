@@ -32,17 +32,8 @@ function load_article(ele, url, html) {
     document.title = html.querySelector("title").textContent + " - Reader by Nektro";
     
     switch (domain) {
-        case "www.polygon.com":
-        case "www.theverge.com":
-        case "www.vox.com":
-        case "www.sbnation.com":
-        case "www.eater.com":
-        case "www.curbed.com":
-        case "www.recode.net":
-        case "www.theringer.com":
-        case "product.voxmedia.com":
-        case "7500toholte.sbnation.com":
-        case "www.aseaofblue.com":
+        case "www.polygon.com": case "www.theverge.com": case "www.vox.com": case "www.sbnation.com": case "www.eater.com": case "www.curbed.com":
+        case "www.recode.net": case "www.theringer.com": case "product.voxmedia.com": case "7500toholte.sbnation.com": case "www.aseaofblue.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".c-page-title")));
             ele.appendChild(r_a_a(html.querySelector(".c-entry-summary")));
@@ -54,9 +45,7 @@ function load_article(ele, url, html) {
             Array.from(r_a_a(e2).children).forEach(v => ele.appendChild(v));
             ele.appendChild(document.createElement("hr"));
         });
-        case "medium.com":
-        case "medium.freecodecamp.org":
-        case "hackernoon.com":
+        case "medium.com": case "medium.freecodecamp.org": case "hackernoon.com":
         return Promise.resolve().then(() => {
             ele.appendChild(create_element("div", [], [
                 dcTN("By "),
@@ -107,12 +96,7 @@ function load_article(ele, url, html) {
             for (const item of em) item.remove();
             ele.appendChild(r_a_a(cont));
         });
-        case "www.vice.com":
-        case "motherboard.vice.com":
-        case "tonic.vice.com":
-        case "free.vice.com":
-        case "munchies.vice.com":
-        case "garage.vice.com":
+        case "www.vice.com": case "motherboard.vice.com": case "tonic.vice.com": case "free.vice.com": case "munchies.vice.com": case "garage.vice.com":
         case "noisey.vice.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".article__title")));
