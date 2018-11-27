@@ -78,10 +78,10 @@ function load_article(ele, url, html) {
         });
         default:
         return Promise.resolve().then(() => {
-            ele.children[0].remove();
-            ele.children[0].remove();
+            ele.children[1].remove();
+            ele.appendChild(document.createElement("hr"));
             ele.appendChild(document.createElement("h1"));
-            ele.children[0].innerHTML = `The domain ${domain} is not supported yet. Sorry!`;
+            ele.children[2].innerHTML = `The domain ${domain} is not supported yet. Sorry!`;
             ele.appendChild(create_element("p", [], [
                 dcTN(`Want us to add support for this domain? Sumbit a proposal `),
                 create_element("a", [["href",`https://github.com/nektro/reader/issues/new?title=${encodeURIComponent(domain)}&body=${encodeURIComponent(url.href)}`]], [dcTN("here")]),
