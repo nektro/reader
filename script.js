@@ -108,6 +108,7 @@ function load_article(ele, url, html) {
         });
         case "www.vice.com":
         case "motherboard.vice.com":
+        case "tonic.vice.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".article__title")));
             ele.appendChild(r_a_a(html.querySelector(".article__dek")));
