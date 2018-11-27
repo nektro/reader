@@ -62,7 +62,9 @@ function load_article(ele, url, html) {
                         el.parentElement.parentElement.parentElement.replaceChild(ni, el.parentElement.parentElement);
                     }
                 }
-                for (const el of b.querySelectorAll("[src]")) if (el.getAttribute("src").charAt(0) === "/") el.setAttribute("src", url.origin + el.getAttribute("src"));
+                for (const el of b.querySelectorAll("[src]"))
+                    if (el.getAttribute("src").charAt(0) === "/")
+                        el.setAttribute("src", url.origin + el.getAttribute("src"));
                 ele.appendChild(b);
             }
         });
