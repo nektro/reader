@@ -106,6 +106,7 @@ function load_article(ele, url, html) {
             for (const item of em) item.remove();
             ele.appendChild(r_a_a(cont));
         });
+        case "www.vice.com":
         case "motherboard.vice.com":
         return Promise.resolve().then(() => {
             ele.appendChild(r_a_a(html.querySelector(".article__title")));
