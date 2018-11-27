@@ -64,16 +64,17 @@ function load_article(ele, url, html) {
                 html.querySelector("time"),
             ]));
             ele.appendChild(create_element("hr"));
-            const a = html.querySelector(".section-content");
-            const b = r_a_a(a);
-            for (const el of b.querySelectorAll("figure div div")) {
-                if (el.children.length > 0) {
-                    const ni = el.children.length === 4 ? (r_a_a(parse_html_ele(el.children[3].textContent))) : el.children[0];
-                    el.parentElement.parentElement.parentElement.replaceChild(ni, el.parentElement.parentElement);
+            for (const section of html.querySelectorAll(".section-content")) {
+                const b = r_a_a(section);
+                for (const el of b.querySelectorAll("figure div div")) {
+                    if (el.children.length > 0) {
+                        const ni = el.children.length === 4 ? (r_a_a(parse_html_ele(el.children[3].textContent))) : el.children[0];
+                        el.parentElement.parentElement.parentElement.replaceChild(ni, el.parentElement.parentElement);
+                    }
                 }
+                for (const el of b.querySelectorAll("[src]")) if (el.getAttribute("src").charAt(0) === "/") el.setAttribute("src", url.origin + el.getAttribute("src"));
+                ele.appendChild(b);
             }
-            for (const el of b.querySelectorAll("[src]")) if (el.getAttribute("src").charAt(0) === "/") el.setAttribute("src", url.origin + el.getAttribute("src"));
-            ele.appendChild(b);
         });
         default:
         return Promise.resolve().then(() => {
