@@ -106,6 +106,23 @@ function load_article(ele, url, html) {
             for (const item of em) item.remove();
             ele.appendChild(r_a_a(cont));
         });
+        case "motherboard.vice.com":
+        return Promise.resolve().then(() => {
+            ele.appendChild(r_a_a(html.querySelector(".article__title")));
+            ele.appendChild(r_a_a(html.querySelector(".article__dek")));
+            ele.appendChild(create_element("div", [], [
+                dcTN("By "),
+                r_a_a(html.querySelector(".contributor__link")),
+                dcTN(" on "),
+                dcTN(html.querySelector(".article__contributions__publishdate").textContent)
+            ]));
+            ele.appendChild(create_element("hr"));
+            const aiw = html.querySelector(".article_img_wrap");
+            if (aiw !== null) ele.appendChild(create_element("img", [["src",aiw.firstElementChild.firstElementChild.dataset.src]]));
+            const ab = html.querySelector(".article__body");
+            for (const e of ab.querySelectorAll(".article__embed")) e.remove();
+            ele.appendChild(r_a_a(ab));
+        });
         default:
         return Promise.resolve().then(() => {
             ele.children[1].remove();
