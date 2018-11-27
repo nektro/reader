@@ -45,7 +45,7 @@ function load_article(ele, url, html) {
             Array.from(r_a_a(e2).children).forEach(v => ele.appendChild(v));
             ele.appendChild(document.createElement("hr"));
         });
-        case "medium.com": case "medium.freecodecamp.org": case "hackernoon.com": case "blog.medium.com":
+        case "medium.com": case "medium.freecodecamp.org": case "hackernoon.com": case "blog.medium.com": case "govtrackinsider.com":
         return Promise.resolve().then(() => {
             ele.appendChild(create_element("div", [], [
                 dcTN("By "),
