@@ -95,6 +95,17 @@ function load_article(ele, url, html) {
                 ele.appendChild(r_a_a(p));
             }
         });
+        case "techcrunch.com":
+        return Promise.resolve().then(() => {
+            ele.appendChild(r_a_a(html.querySelector(".article__title")));
+            ele.appendChild(r_a_a(html.querySelector(".article__byline")));
+            ele.appendChild(create_element("hr"));
+            ele.appendChild(r_a_a(html.querySelector(".article__featured-image")));
+            const cont = html.querySelector(".article-content");
+            const em = [...cont.querySelectorAll(".embed")];
+            for (const item of em) item.remove();
+            ele.appendChild(r_a_a(cont));
+        });
         default:
         return Promise.resolve().then(() => {
             ele.children[1].remove();
