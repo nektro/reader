@@ -56,6 +56,7 @@ function load_article(ele, url, html) {
         });
         case "medium.com":
         case "medium.freecodecamp.org":
+        case "hackernoon.com":
         return Promise.resolve().then(() => {
             ele.appendChild(create_element("div", [], [
                 dcTN("By "),
