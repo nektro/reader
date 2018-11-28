@@ -30,7 +30,7 @@ https://nektro.github.io/reader/
 ### Contributing Code
 1. Issues that have been labeled either `domain_support` or `bug` have been confirmed and are ready to work on.
 2. If you wish to work on an issue please let others know by posting a message in the comments.
-3. I will label issues with `good first issue` as best as I can. The best candidates for this label are domains that are part of a network that has support already added. Adding support for this domain would consist of: adding the domain to the appropriate `switch` statement, adding the site's favicon, and adding the site to the list of supported domains in `index.html`
+3. I will label issues with `good first issue` as best as I can. The best candidates for this label are domains that are part of a network that has support already added. Adding support for this domain would consist of: adding the domain to the appropriate `switch` statement, and adding the site to the list of supported domains in [`domains.txt`](domains.txt).
 
 ## License
 Apache 2.0. See more in the [LICENSE](LICNSE]).
