@@ -47,7 +47,7 @@ function load_article(ele, url, html) {
             ele.appendChild(document.createElement("hr"));
         });
         case "medium.com": case "medium.freecodecamp.org": case "hackernoon.com": case "blog.medium.com": case "govtrackinsider.com": case "medium.design":
-        case "m.signalvnoise.com":
+        case "m.signalvnoise.com": case "blog.discordapp.com":
         return Promise.resolve().then(() => {
             ele.appendChild(create_element("div", [], [
                 dcTN("By "),

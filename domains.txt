@@ -25,3 +25,4 @@ blog.medium.com
 govtrackinsider.com
 medium.design
 m.signalvnoise.com
+blog.discordapp.com
